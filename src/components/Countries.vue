@@ -45,7 +45,7 @@ let text = '';
 
 function searchCountry(text){
   filterdCountries.length = 0
-  countries.filter(c => c.name.common.toLowerCase().includes(text.toLowerCase())).forEach(element => {
+  countries.filter(c => c.name.common.toLowerCase().startsWith(text.toLowerCase())).forEach(element => {
     filterdCountries.push(element)
   })
 
